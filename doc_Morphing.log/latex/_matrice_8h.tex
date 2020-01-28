@@ -1,0 +1,142 @@
+\hypertarget{_matrice_8h}{\section{include/\+Matrice.h File Reference}
+\label{_matrice_8h}\index{include/\+Matrice.\+h@{include/\+Matrice.\+h}}
+}
+
+
+Gère la construction et l'utilisation de la structure \hyperlink{struct_matrice}{Matrice}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for Matrice.\+h\+:
+This graph shows which files directly or indirectly include this file\+:
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_matrice}{Matrice}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_matrice}{Matrice} \hyperlink{_matrice_8h_af0c0dd37266ae9b953d7e774ece50501}{alloue\+\_\+matrice} (int size)
+\begin{DoxyCompactList}\small\item\em Alloue une matrice. \end{DoxyCompactList}\item 
+void \hyperlink{_matrice_8h_a1805cd8420bac41204df31c74035968f}{sous\+\_\+matrice} (\hyperlink{struct_matrice}{Matrice} $\ast$m1, \hyperlink{struct_matrice}{Matrice} $\ast$m2, int x, int y)
+\begin{DoxyCompactList}\small\item\em Calcule la sous matrice de m1 selon une coordonnée de la matrice. \end{DoxyCompactList}\item 
+void \hyperlink{_matrice_8h_aa182759ae6bd4ea11f98af67c5094ecf}{libere\+\_\+matrice} (\hyperlink{struct_matrice}{Matrice} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Calcule la sous matrice de m1 selon une coordonnée de la matrice. \end{DoxyCompactList}\item 
+void \hyperlink{_matrice_8h_a8462bb5d69e45376155df9f750473500}{affiche\+\_\+matrice} (\hyperlink{struct_matrice}{Matrice} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Affiche la matrice dans la console. \end{DoxyCompactList}\item 
+long \hyperlink{_matrice_8h_a52d40248a00aab081b7a50a33af88202}{determinant} (\hyperlink{struct_matrice}{Matrice} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Calcule le déterminant de la matrice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère la construction et l'utilisation de la structure \hyperlink{struct_matrice}{Matrice}. 
+
+
+\begin{DoxyEnumerate}
+\item Structure \hyperlink{struct_matrice}{Matrice} \+: permet de représenter une matrice. ~\newline
+ Contient un tableau d'entiers de rang taille. 
+\end{DoxyEnumerate}
+
+\subsection{Function Documentation}
+\hypertarget{_matrice_8h_a8462bb5d69e45376155df9f750473500}{\index{Matrice.\+h@{Matrice.\+h}!affiche\+\_\+matrice@{affiche\+\_\+matrice}}
+\index{affiche\+\_\+matrice@{affiche\+\_\+matrice}!Matrice.\+h@{Matrice.\+h}}
+\subsubsection[{affiche\+\_\+matrice}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\+\_\+matrice (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrice} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{_matrice_8h_a8462bb5d69e45376155df9f750473500}
+
+
+Affiche la matrice dans la console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \+: matrice à afficher.\\
+\hline
+\end{DoxyParams}
+Désalloue l'espace mémoire utilisée par le tableau à deux dimensions. \hypertarget{_matrice_8h_af0c0dd37266ae9b953d7e774ece50501}{\index{Matrice.\+h@{Matrice.\+h}!alloue\+\_\+matrice@{alloue\+\_\+matrice}}
+\index{alloue\+\_\+matrice@{alloue\+\_\+matrice}!Matrice.\+h@{Matrice.\+h}}
+\subsubsection[{alloue\+\_\+matrice}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrice} alloue\+\_\+matrice (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}\label{_matrice_8h_af0c0dd37266ae9b953d7e774ece50501}
+
+
+Alloue une matrice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \+: taille de la matrice.\\
+\hline
+\end{DoxyParams}
+Alloue la mémoire nécessaire pour le tableau à deux dimensions de taille size.
+
+\begin{DoxyReturn}{Returns}
+Renvoie une matrice. 
+\end{DoxyReturn}
+\hypertarget{_matrice_8h_a52d40248a00aab081b7a50a33af88202}{\index{Matrice.\+h@{Matrice.\+h}!determinant@{determinant}}
+\index{determinant@{determinant}!Matrice.\+h@{Matrice.\+h}}
+\subsubsection[{determinant}]{\setlength{\rightskip}{0pt plus 5cm}long determinant (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrice} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{_matrice_8h_a52d40248a00aab081b7a50a33af88202}
+
+
+Calcule le déterminant de la matrice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \+: matrice à calculer.\\
+\hline
+\end{DoxyParams}
+Calcule les sous matrices de m selon la premiere ligne et appelle récursivement determinant sur les sous matrices. Libère la matrice une fois le calcul fini
+
+\begin{DoxyReturn}{Returns}
+Renvoie le résultat du déterminant. 
+\end{DoxyReturn}
+\hypertarget{_matrice_8h_aa182759ae6bd4ea11f98af67c5094ecf}{\index{Matrice.\+h@{Matrice.\+h}!libere\+\_\+matrice@{libere\+\_\+matrice}}
+\index{libere\+\_\+matrice@{libere\+\_\+matrice}!Matrice.\+h@{Matrice.\+h}}
+\subsubsection[{libere\+\_\+matrice}]{\setlength{\rightskip}{0pt plus 5cm}void libere\+\_\+matrice (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrice} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{_matrice_8h_aa182759ae6bd4ea11f98af67c5094ecf}
+
+
+Calcule la sous matrice de m1 selon une coordonnée de la matrice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \+: matrice à libérer.\\
+\hline
+\end{DoxyParams}
+Désalloue l'espace mémoire utilisée par le tableau à deux dimensions. \hypertarget{_matrice_8h_a1805cd8420bac41204df31c74035968f}{\index{Matrice.\+h@{Matrice.\+h}!sous\+\_\+matrice@{sous\+\_\+matrice}}
+\index{sous\+\_\+matrice@{sous\+\_\+matrice}!Matrice.\+h@{Matrice.\+h}}
+\subsubsection[{sous\+\_\+matrice}]{\setlength{\rightskip}{0pt plus 5cm}void sous\+\_\+matrice (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrice} $\ast$}]{m1, }
+\item[{{\bf Matrice} $\ast$}]{m2, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{_matrice_8h_a1805cd8420bac41204df31c74035968f}
+
+
+Calcule la sous matrice de m1 selon une coordonnée de la matrice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & \+: matrice mère. \\
+\hline
+{\em m2} & \+: sous matrice à calculer, de taille n-\/1. \\
+\hline
+{\em x} & \+: abscisse du point. \\
+\hline
+{\em y} & \+: ordonnée du point.\\
+\hline
+\end{DoxyParams}
+Stocke dans m2, le contenu de m1 après avoir retiré la x-\/ième ligne et y-\/ième colonne. Le contenu de m2 est écrasé. m1 et m2 doivent être allouées. 

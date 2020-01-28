@@ -1,0 +1,349 @@
+\hypertarget{_triangle_8h}{\section{include/\+Triangle.h File Reference}
+\label{_triangle_8h}\index{include/\+Triangle.\+h@{include/\+Triangle.\+h}}
+}
+
+
+Gère la construction et l'utilisation de la structure \hyperlink{struct_triangle}{Triangle}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Point.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Matrice.\+h\char`\"{}}\\*
+Include dependency graph for Triangle.\+h\+:
+This graph shows which files directly or indirectly include this file\+:
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_triangle}{Triangle}
+\item 
+struct \hyperlink{structltriangle}{ltriangle}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_triangle_8h_ae738b9b4ed989ea7c64cbda65ae2d269}{typedef struct \hyperlink{structltriangle}{ltriangle} {\bfseries Cel\+Triangle}}\label{_triangle_8h_ae738b9b4ed989ea7c64cbda65ae2d269}
+
+\item 
+\hypertarget{_triangle_8h_a40eb00fdbf29f5e5da51263520c3467f}{typedef struct \hyperlink{structltriangle}{ltriangle} $\ast$ {\bfseries Liste\+Triangle}}\label{_triangle_8h_a40eb00fdbf29f5e5da51263520c3467f}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_triangle}{Triangle} \hyperlink{_triangle_8h_a348beb367b4308dd671c0b82b2e58fdf}{triangle} (\hyperlink{struct_vecteur}{Point} a, \hyperlink{struct_vecteur}{Point} b, \hyperlink{struct_vecteur}{Point} c)
+\begin{DoxyCompactList}\small\item\em Initialise un triangle à partir de 3 points donnés en arguments. \end{DoxyCompactList}\item 
+void \hyperlink{_triangle_8h_a1c8f3ea263866d04b5bf1abbe7296c6b}{affiche\+\_\+triangle\+\_\+ascii} (\hyperlink{struct_triangle}{Triangle} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Affiche le triangle t dans le terminal. \end{DoxyCompactList}\item 
+void \hyperlink{_triangle_8h_ac609a9eade8f6aa2f3e637b38d562a3c}{affiche\+\_\+liste\+\_\+triangle\+\_\+ascii} (\hyperlink{structltriangle}{Liste\+Triangle} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Affiche la liste de triangles l dans le terminal. \end{DoxyCompactList}\item 
+\hyperlink{structltriangle}{Cel\+Triangle} $\ast$ \hyperlink{_triangle_8h_adb91aab6bcaabca0381f8fea9f4423c5}{alloue\+\_\+cel\+\_\+triangle} (\hyperlink{struct_triangle}{Triangle} t)
+\begin{DoxyCompactList}\small\item\em Alloue une cellule pour un triangle. \end{DoxyCompactList}\item 
+void \hyperlink{_triangle_8h_ace510c70a606df1a276114a79695044f}{libere\+\_\+liste\+\_\+triangle} (\hyperlink{structltriangle}{Liste\+Triangle} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Libère la mémoire allouée à la liste de triangles. \end{DoxyCompactList}\item 
+\hyperlink{struct_vecteur}{Point} \hyperlink{_triangle_8h_a90240deea2d6262a571c4c25c2344709}{determine\+\_\+point} (\hyperlink{structltriangle}{Cel\+Triangle} $\ast$t, \hyperlink{structltriangle}{Cel\+Triangle} $\ast$t2)
+\begin{DoxyCompactList}\small\item\em Détermine quel point de t2 n'est pas dans t1. \end{DoxyCompactList}\item 
+void \hyperlink{_triangle_8h_ac1b54ee5729c792239e61832a9f9bec0}{init\+\_\+triangle} (\hyperlink{structltriangle}{Liste\+Triangle} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Initialise la liste de triangle selon la situation de départ. \end{DoxyCompactList}\item 
+void \hyperlink{_triangle_8h_a8f87cf289dad6f43426439a989017d8f}{calcule\+\_\+barycentre} (\hyperlink{struct_triangle}{Triangle} t, \hyperlink{struct_vecteur}{Point} p, int $\ast$a, int $\ast$b, int $\ast$c)
+\begin{DoxyCompactList}\small\item\em Initialise la liste de triangle selon la situation de départ. \end{DoxyCompactList}\item 
+int \hyperlink{_triangle_8h_a136f6ec4fbae7151eb9bb309e6edbc20}{est\+\_\+dans\+\_\+triangle} (\hyperlink{struct_triangle}{Triangle} t, \hyperlink{struct_vecteur}{Point} p)
+\begin{DoxyCompactList}\small\item\em Détermine si le point p est dans t. \end{DoxyCompactList}\item 
+\hyperlink{structltriangle}{Cel\+Triangle} $\ast$ \hyperlink{_triangle_8h_ade0be02f75a012695c62089a9ad2edfe}{cherche\+\_\+triangle} (\hyperlink{struct_vecteur}{Point} p, \hyperlink{structltriangle}{Liste\+Triangle} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Cherche dans quel triangle est le point p. \end{DoxyCompactList}\item 
+void \hyperlink{_triangle_8h_a6b346982a9f4747618ed21ad436d4182}{reinitialise\+\_\+voisins} (\hyperlink{structltriangle}{Cel\+Triangle} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Remet à N\+U\+L\+L tous les voisins de la cellule prise en argument. \end{DoxyCompactList}\item 
+int \hyperlink{_triangle_8h_a7c837282aba53b59173b2f5a2b81e655}{voisinage} (\hyperlink{structltriangle}{Cel\+Triangle} $\ast$t1, \hyperlink{structltriangle}{Cel\+Triangle} $\ast$t2)
+\begin{DoxyCompactList}\small\item\em Crée les liens de voisinage entre deux triangles dans la mesure du possible. \end{DoxyCompactList}\item 
+char \hyperlink{_triangle_8h_ad37ba6582f2965bec8751d6eb16d1053}{position\+\_\+point} (\hyperlink{struct_triangle}{Triangle} t, \hyperlink{struct_vecteur}{Point} p)
+\begin{DoxyCompactList}\small\item\em Détermine quel sommet correspond au point pris en argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère la construction et l'utilisation de la structure \hyperlink{struct_triangle}{Triangle}. 
+
+
+\begin{DoxyEnumerate}
+\item Structure \hyperlink{struct_triangle}{Triangle} \+: permet de représenter un triangle avec ses trois sommets. ~\newline
+ Contient 3 strcutures de type point.
+\item Structure Cel\+Triangle/\+Liste\+Triangle \+: permet de représenter une liste de triangle ou une cellule. ~\newline
+ Contient un triangle, 3 pointeurs vers les 3 possibles voisins de ce triangle, contient aussi un pointeur vers la paire du triangle dans l'image de droite. le pointeur suivant correspond au triangle suivant dans la liste. 
+\end{DoxyEnumerate}
+
+\subsection{Function Documentation}
+\hypertarget{_triangle_8h_ac609a9eade8f6aa2f3e637b38d562a3c}{\index{Triangle.\+h@{Triangle.\+h}!affiche\+\_\+liste\+\_\+triangle\+\_\+ascii@{affiche\+\_\+liste\+\_\+triangle\+\_\+ascii}}
+\index{affiche\+\_\+liste\+\_\+triangle\+\_\+ascii@{affiche\+\_\+liste\+\_\+triangle\+\_\+ascii}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{affiche\+\_\+liste\+\_\+triangle\+\_\+ascii}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\+\_\+liste\+\_\+triangle\+\_\+ascii (
+\begin{DoxyParamCaption}
+\item[{{\bf Liste\+Triangle} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_ac609a9eade8f6aa2f3e637b38d562a3c}
+
+
+Affiche la liste de triangles l dans le terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \+: liste de triangle à afficher. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_triangle_8h_a1c8f3ea263866d04b5bf1abbe7296c6b}{\index{Triangle.\+h@{Triangle.\+h}!affiche\+\_\+triangle\+\_\+ascii@{affiche\+\_\+triangle\+\_\+ascii}}
+\index{affiche\+\_\+triangle\+\_\+ascii@{affiche\+\_\+triangle\+\_\+ascii}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{affiche\+\_\+triangle\+\_\+ascii}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\+\_\+triangle\+\_\+ascii (
+\begin{DoxyParamCaption}
+\item[{{\bf Triangle} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_a1c8f3ea263866d04b5bf1abbe7296c6b}
+
+
+Affiche le triangle t dans le terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: triangle à afficher. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_triangle_8h_adb91aab6bcaabca0381f8fea9f4423c5}{\index{Triangle.\+h@{Triangle.\+h}!alloue\+\_\+cel\+\_\+triangle@{alloue\+\_\+cel\+\_\+triangle}}
+\index{alloue\+\_\+cel\+\_\+triangle@{alloue\+\_\+cel\+\_\+triangle}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{alloue\+\_\+cel\+\_\+triangle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cel\+Triangle}$\ast$ alloue\+\_\+cel\+\_\+triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Triangle}}]{t}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_adb91aab6bcaabca0381f8fea9f4423c5}
+
+
+Alloue une cellule pour un triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: triangle qui sera ajouté dans la cellule allouée.\\
+\hline
+\end{DoxyParams}
+Alloue la mémoire nécessaire pour une cellule de liste de triangles.
+
+\begin{DoxyReturn}{Returns}
+Renvoie une cellule de liste de triangles. 
+\end{DoxyReturn}
+\hypertarget{_triangle_8h_a8f87cf289dad6f43426439a989017d8f}{\index{Triangle.\+h@{Triangle.\+h}!calcule\+\_\+barycentre@{calcule\+\_\+barycentre}}
+\index{calcule\+\_\+barycentre@{calcule\+\_\+barycentre}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{calcule\+\_\+barycentre}]{\setlength{\rightskip}{0pt plus 5cm}void calcule\+\_\+barycentre (
+\begin{DoxyParamCaption}
+\item[{{\bf Triangle}}]{t, }
+\item[{{\bf Point}}]{p, }
+\item[{int $\ast$}]{a, }
+\item[{int $\ast$}]{b, }
+\item[{int $\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_a8f87cf289dad6f43426439a989017d8f}
+
+
+Initialise la liste de triangle selon la situation de départ. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: triangle de référence. \\
+\hline
+{\em p} & \+: point dont on veut déterminer les coordonnées barycentriques dans t. \\
+\hline
+{\em a} & \+: alpha. \\
+\hline
+{\em b} & \+: beta. \\
+\hline
+{\em c} & \+: gamma.\\
+\hline
+\end{DoxyParams}
+Calcule les coordonnées barycentriques du point p dans t, les coordonnées sont passées par adresse dans a, b et c. \hypertarget{_triangle_8h_ade0be02f75a012695c62089a9ad2edfe}{\index{Triangle.\+h@{Triangle.\+h}!cherche\+\_\+triangle@{cherche\+\_\+triangle}}
+\index{cherche\+\_\+triangle@{cherche\+\_\+triangle}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{cherche\+\_\+triangle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cel\+Triangle}$\ast$ cherche\+\_\+triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{p, }
+\item[{{\bf Liste\+Triangle} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_ade0be02f75a012695c62089a9ad2edfe}
+
+
+Cherche dans quel triangle est le point p. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \+: liste de triangles. \\
+\hline
+{\em p} & \+: point testé.\\
+\hline
+\end{DoxyParams}
+Parcourt la liste des triangles, si p n'est pas dans le triangle de la cellules courante, alors on regarde s'il est dans le triangle paire de cette cellule. Sinon on passe au suivant.
+
+\begin{DoxyReturn}{Returns}
+Renvoie la cellule du triangle où le point est situé. 
+\end{DoxyReturn}
+\hypertarget{_triangle_8h_a90240deea2d6262a571c4c25c2344709}{\index{Triangle.\+h@{Triangle.\+h}!determine\+\_\+point@{determine\+\_\+point}}
+\index{determine\+\_\+point@{determine\+\_\+point}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{determine\+\_\+point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} determine\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf Cel\+Triangle} $\ast$}]{t, }
+\item[{{\bf Cel\+Triangle} $\ast$}]{t2}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_a90240deea2d6262a571c4c25c2344709}
+
+
+Détermine quel point de t2 n'est pas dans t1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: triangle que l'on veut tester s'il est delaunya ou non. \\
+\hline
+{\em t2} & \+: un des voisins de t.\\
+\hline
+\end{DoxyParams}
+Determine quel est le voisin de t2 qui permet de revenir sur t. Le point de t2 qui n'est dans t est celui qui n'est pas dans la diagonale en commun des 2 triangles. Quitte le programme si l'un des deux triangles est N\+U\+L\+L.
+
+\begin{DoxyReturn}{Returns}
+Renvoie le point de t2 qui n'est pas dans t, si les deux triangles ne sont pas voisins, le programme quitte car ils doivent être obligatoirement voisins. 
+\end{DoxyReturn}
+\hypertarget{_triangle_8h_a136f6ec4fbae7151eb9bb309e6edbc20}{\index{Triangle.\+h@{Triangle.\+h}!est\+\_\+dans\+\_\+triangle@{est\+\_\+dans\+\_\+triangle}}
+\index{est\+\_\+dans\+\_\+triangle@{est\+\_\+dans\+\_\+triangle}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{est\+\_\+dans\+\_\+triangle}]{\setlength{\rightskip}{0pt plus 5cm}int est\+\_\+dans\+\_\+triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Triangle}}]{t, }
+\item[{{\bf Point}}]{p}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_a136f6ec4fbae7151eb9bb309e6edbc20}
+
+
+Détermine si le point p est dans t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: triangle de référence. \\
+\hline
+{\em p} & \+: point testé.\\
+\hline
+\end{DoxyParams}
+Calcule les coordonnées barycentriques de p dans t. p est dans t si a b et c sont tous $>$= 0 ou $<$= 0.
+
+\begin{DoxyReturn}{Returns}
+Renvoie 1 si p est dans t. Renvoie 0 sinon. 
+\end{DoxyReturn}
+\hypertarget{_triangle_8h_ac1b54ee5729c792239e61832a9f9bec0}{\index{Triangle.\+h@{Triangle.\+h}!init\+\_\+triangle@{init\+\_\+triangle}}
+\index{init\+\_\+triangle@{init\+\_\+triangle}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{init\+\_\+triangle}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Liste\+Triangle} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_ac1b54ee5729c792239e61832a9f9bec0}
+
+
+Initialise la liste de triangle selon la situation de départ. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \+: liste de triangle à initialiser.\\
+\hline
+\end{DoxyParams}
+Ajoute 2 cellules à la liste de triangles (les deux triangles de départ), ainsi que 2 cellules pour les triangles de droites. \hypertarget{_triangle_8h_ace510c70a606df1a276114a79695044f}{\index{Triangle.\+h@{Triangle.\+h}!libere\+\_\+liste\+\_\+triangle@{libere\+\_\+liste\+\_\+triangle}}
+\index{libere\+\_\+liste\+\_\+triangle@{libere\+\_\+liste\+\_\+triangle}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{libere\+\_\+liste\+\_\+triangle}]{\setlength{\rightskip}{0pt plus 5cm}void libere\+\_\+liste\+\_\+triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Liste\+Triangle} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_ace510c70a606df1a276114a79695044f}
+
+
+Libère la mémoire allouée à la liste de triangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \+: liste de triangles à libérer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_triangle_8h_ad37ba6582f2965bec8751d6eb16d1053}{\index{Triangle.\+h@{Triangle.\+h}!position\+\_\+point@{position\+\_\+point}}
+\index{position\+\_\+point@{position\+\_\+point}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{position\+\_\+point}]{\setlength{\rightskip}{0pt plus 5cm}char position\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf Triangle}}]{t, }
+\item[{{\bf Point}}]{p}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_ad37ba6582f2965bec8751d6eb16d1053}
+
+
+Détermine quel sommet correspond au point pris en argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: cellule du triangle à tester. \\
+\hline
+{\em p} & \+: point à tester.\\
+\hline
+\end{DoxyParams}
+Teste les coordonnées de p avec les sommets de t.
+
+\begin{DoxyReturn}{Returns}
+a b ou c selon à quel sommet correspond p, renvoie le caractère 0 sinon.. 
+\end{DoxyReturn}
+\hypertarget{_triangle_8h_a6b346982a9f4747618ed21ad436d4182}{\index{Triangle.\+h@{Triangle.\+h}!reinitialise\+\_\+voisins@{reinitialise\+\_\+voisins}}
+\index{reinitialise\+\_\+voisins@{reinitialise\+\_\+voisins}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{reinitialise\+\_\+voisins}]{\setlength{\rightskip}{0pt plus 5cm}void reinitialise\+\_\+voisins (
+\begin{DoxyParamCaption}
+\item[{{\bf Cel\+Triangle} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_a6b346982a9f4747618ed21ad436d4182}
+
+
+Remet à N\+U\+L\+L tous les voisins de la cellule prise en argument. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: cellule dont l'on veut réinitialiser les voisins.\\
+\hline
+\end{DoxyParams}
+Tous les voisins de t sont remis à N\+U\+L\+L. \hypertarget{_triangle_8h_a348beb367b4308dd671c0b82b2e58fdf}{\index{Triangle.\+h@{Triangle.\+h}!triangle@{triangle}}
+\index{triangle@{triangle}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{triangle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Triangle} triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{a, }
+\item[{{\bf Point}}]{b, }
+\item[{{\bf Point}}]{c}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_a348beb367b4308dd671c0b82b2e58fdf}
+
+
+Initialise un triangle à partir de 3 points donnés en arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \+: sommet A \\
+\hline
+{\em b} & \+: sommet B \\
+\hline
+{\em c} & \+: sommet C\\
+\hline
+\end{DoxyParams}
+Définit un triangle et affecte les 3 points dans ses champs a, b, et c.
+
+\begin{DoxyReturn}{Returns}
+Renvoie un triangle initialisé. 
+\end{DoxyReturn}
+\hypertarget{_triangle_8h_a7c837282aba53b59173b2f5a2b81e655}{\index{Triangle.\+h@{Triangle.\+h}!voisinage@{voisinage}}
+\index{voisinage@{voisinage}!Triangle.\+h@{Triangle.\+h}}
+\subsubsection[{voisinage}]{\setlength{\rightskip}{0pt plus 5cm}int voisinage (
+\begin{DoxyParamCaption}
+\item[{{\bf Cel\+Triangle} $\ast$}]{t1, }
+\item[{{\bf Cel\+Triangle} $\ast$}]{t2}
+\end{DoxyParamCaption}
+)}}\label{_triangle_8h_a7c837282aba53b59173b2f5a2b81e655}
+
+
+Crée les liens de voisinage entre deux triangles dans la mesure du possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t1} & \+: première cellule. \\
+\hline
+{\em t2} & \+: deuxième cellule.\\
+\hline
+\end{DoxyParams}
+Teste les coordonnées des sommets de t1 et t2 et affecte les champs de voisinages dans le cas ou les deux triangles sont voisins.
+
+\begin{DoxyReturn}{Returns}
+Renvoie 1 si les deux triangles sont voisins et 0 sinon. 
+\end{DoxyReturn}

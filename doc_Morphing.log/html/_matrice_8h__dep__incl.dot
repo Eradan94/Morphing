@@ -1,0 +1,14 @@
+digraph "include/Matrice.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/Matrice.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="include/Triangle.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_triangle_8h.html",tooltip="Gère la construction et l&#39;utilisation de la structure Triangle. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="include/Frame.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_frame_8h.html",tooltip="Gère le rendu. "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="include/Graph.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_graph_8h.html",tooltip="Gère l&#39;affichage du projet. "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="include/Triangulation.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_triangulation_8h.html",tooltip="Gère la triangulation de delaunay. "];
+}

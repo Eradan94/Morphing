@@ -1,0 +1,149 @@
+\hypertarget{_triangulation_8h}{\section{include/\+Triangulation.h File Reference}
+\label{_triangulation_8h}\index{include/\+Triangulation.\+h@{include/\+Triangulation.\+h}}
+}
+
+
+Gère la triangulation de delaunay.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Triangle.\+h\char`\"{}}\\*
+Include dependency graph for Triangulation.\+h\+:
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_triangulation_8h_a218a831ec7a575e4b9507806a287ba2b}{init\+\_\+matrice\+\_\+delaunay} (\hyperlink{struct_matrice}{Matrice} $\ast$m, \hyperlink{struct_triangle}{Triangle} t, \hyperlink{struct_vecteur}{Point} d)
+\begin{DoxyCompactList}\small\item\em Initialise la matrice pour la triangulation de delaunay. \end{DoxyCompactList}\item 
+int \hyperlink{_triangulation_8h_a8afd9c98d7ed245a7d2a44a46398a35b}{triangle\+\_\+est\+\_\+delaunay} (\hyperlink{structltriangle}{Cel\+Triangle} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Teste si le triangle t est delaunay avec chacun de ses voisins. \end{DoxyCompactList}\item 
+int \hyperlink{_triangulation_8h_afdf1ae102b2e0f888c4689653a76ee27}{det\+\_\+delaunay} (\hyperlink{struct_triangle}{Triangle} t, \hyperlink{struct_vecteur}{Point} p)
+\begin{DoxyCompactList}\small\item\em Teste si t est delaunay. \end{DoxyCompactList}\item 
+void \hyperlink{_triangulation_8h_a7eede7916952f638821daeab3d388aed}{triangule} (\hyperlink{structltriangle}{Liste\+Triangle} $\ast$l, \hyperlink{structltriangle}{Cel\+Triangle} $\ast$t, \hyperlink{structlpoint}{Cel\+Point} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Effectue la triangulation. \end{DoxyCompactList}\item 
+void \hyperlink{_triangulation_8h_a3a94d643ef8a633e46dd5b123a558f92}{flip} (\hyperlink{structltriangle}{Cel\+Triangle} $\ast$t1, \hyperlink{structltriangle}{Cel\+Triangle} $\ast$t2, int cote)
+\begin{DoxyCompactList}\small\item\em Flip la diagonale des deux triangles t1 et t2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère la triangulation de delaunay. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_triangulation_8h_afdf1ae102b2e0f888c4689653a76ee27}{\index{Triangulation.\+h@{Triangulation.\+h}!det\+\_\+delaunay@{det\+\_\+delaunay}}
+\index{det\+\_\+delaunay@{det\+\_\+delaunay}!Triangulation.\+h@{Triangulation.\+h}}
+\subsubsection[{det\+\_\+delaunay}]{\setlength{\rightskip}{0pt plus 5cm}int det\+\_\+delaunay (
+\begin{DoxyParamCaption}
+\item[{{\bf Triangle}}]{t, }
+\item[{{\bf Point}}]{p}
+\end{DoxyParamCaption}
+)}}\label{_triangulation_8h_afdf1ae102b2e0f888c4689653a76ee27}
+
+
+Teste si t est delaunay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: cellule du triangle à tester. \\
+\hline
+{\em p} & \+: point à tester.\\
+\hline
+\end{DoxyParams}
+Initialise une matrice selon t et p et calcule le déterminant.
+
+\begin{DoxyReturn}{Returns}
+Renvoie 1 si le determinant est positif (triangle t n'est pas delaunay), sinon le triangle estdelaunay. 
+\end{DoxyReturn}
+\hypertarget{_triangulation_8h_a3a94d643ef8a633e46dd5b123a558f92}{\index{Triangulation.\+h@{Triangulation.\+h}!flip@{flip}}
+\index{flip@{flip}!Triangulation.\+h@{Triangulation.\+h}}
+\subsubsection[{flip}]{\setlength{\rightskip}{0pt plus 5cm}void flip (
+\begin{DoxyParamCaption}
+\item[{{\bf Cel\+Triangle} $\ast$}]{t1, }
+\item[{{\bf Cel\+Triangle} $\ast$}]{t2, }
+\item[{int}]{cote}
+\end{DoxyParamCaption}
+)}}\label{_triangulation_8h_a3a94d643ef8a633e46dd5b123a558f92}
+
+
+Flip la diagonale des deux triangles t1 et t2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t1} & \+: cellule du premier triangle. \\
+\hline
+{\em t2} & \+: cellule du deuxième triangle. \\
+\hline
+{\em cote} & \+: quel est le coté de t1 à flipper \+: 1 pour A\+B, 2 pour B\+C et 3 pour A\+C.\\
+\hline
+\end{DoxyParams}
+Selon cote et determine\+\_\+point on garde en mémoire 2 voisins de t1 et t2. Toujours selon cote, on change les coordonnées des sommets de t1 et t2. On reinitialise les voisins de t1 et t2 pour éviter des conflits puis on met à jour leurs voisins. On appelle flip sur le triangle paire de t1 et de t2 pour affectuer les mêmes flip à gauche et à droite. On appelle flip récursivement tant que t1 et t2 ne sont pas delaunay. \hypertarget{_triangulation_8h_a218a831ec7a575e4b9507806a287ba2b}{\index{Triangulation.\+h@{Triangulation.\+h}!init\+\_\+matrice\+\_\+delaunay@{init\+\_\+matrice\+\_\+delaunay}}
+\index{init\+\_\+matrice\+\_\+delaunay@{init\+\_\+matrice\+\_\+delaunay}!Triangulation.\+h@{Triangulation.\+h}}
+\subsubsection[{init\+\_\+matrice\+\_\+delaunay}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+matrice\+\_\+delaunay (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrice} $\ast$}]{m, }
+\item[{{\bf Triangle}}]{t, }
+\item[{{\bf Point}}]{d}
+\end{DoxyParamCaption}
+)}}\label{_triangulation_8h_a218a831ec7a575e4b9507806a287ba2b}
+
+
+Initialise la matrice pour la triangulation de delaunay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \+: matrice à initialiser. \\
+\hline
+{\em t} & \+: triangle que l'on veut tester. \\
+\hline
+{\em d} & \+: point que l'on veut tester.\\
+\hline
+\end{DoxyParams}
+Initialise la matrice 3x3 selon les coordonnées de t et d. \hypertarget{_triangulation_8h_a8afd9c98d7ed245a7d2a44a46398a35b}{\index{Triangulation.\+h@{Triangulation.\+h}!triangle\+\_\+est\+\_\+delaunay@{triangle\+\_\+est\+\_\+delaunay}}
+\index{triangle\+\_\+est\+\_\+delaunay@{triangle\+\_\+est\+\_\+delaunay}!Triangulation.\+h@{Triangulation.\+h}}
+\subsubsection[{triangle\+\_\+est\+\_\+delaunay}]{\setlength{\rightskip}{0pt plus 5cm}int triangle\+\_\+est\+\_\+delaunay (
+\begin{DoxyParamCaption}
+\item[{{\bf Cel\+Triangle} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{_triangulation_8h_a8afd9c98d7ed245a7d2a44a46398a35b}
+
+
+Teste si le triangle t est delaunay avec chacun de ses voisins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \+: cellule du triangle à tester.\\
+\hline
+\end{DoxyParams}
+Pour chaque voisin de t \+:
+\begin{DoxyItemize}
+\item on détermine le point qui n'est pas dans t.
+\item on vérifie si t est delaunay avec ce point
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+Renvoie 1 si est delaunay, une valeur négative sinon, en fonction du coté qui n'est pas delaunay \+: -\/1 pour le coté A\+B -\/2 pour le coté B\+C -\/3 pour le coté A\+C 
+\end{DoxyReturn}
+\hypertarget{_triangulation_8h_a7eede7916952f638821daeab3d388aed}{\index{Triangulation.\+h@{Triangulation.\+h}!triangule@{triangule}}
+\index{triangule@{triangule}!Triangulation.\+h@{Triangulation.\+h}}
+\subsubsection[{triangule}]{\setlength{\rightskip}{0pt plus 5cm}void triangule (
+\begin{DoxyParamCaption}
+\item[{{\bf Liste\+Triangle} $\ast$}]{l, }
+\item[{{\bf Cel\+Triangle} $\ast$}]{t, }
+\item[{{\bf Cel\+Point} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{_triangulation_8h_a7eede7916952f638821daeab3d388aed}
+
+
+Effectue la triangulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \+: liste de triangles. \\
+\hline
+{\em t} & \+: cellule du triangle ou l'on a cliqué. \\
+\hline
+{\em p} & \+: point où l'on a cliqué.\\
+\hline
+\end{DoxyParams}
+Divise en trois triangles, le triangle t. Ajoute les trois nouveaux triangles dans la liste. Retire la cellule de t de la liste. Mise à jour des voisins. Flip les nouveaux triangles si nécessaire. Suppression de l'ancien triangle. 

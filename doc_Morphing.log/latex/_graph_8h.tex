@@ -1,0 +1,249 @@
+\hypertarget{_graph_8h}{\section{include/\+Graph.h File Reference}
+\label{_graph_8h}\index{include/\+Graph.\+h@{include/\+Graph.\+h}}
+}
+
+
+Gère l'affichage du projet.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$M\+L\+V/\+M\+L\+V\+\_\+all.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Triangle.\+h\char`\"{}}\\*
+Include dependency graph for Graph.\+h\+:
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_bouton}{Bouton}
+\item 
+struct \hyperlink{struct_interface}{Interface}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_graph_8h_afc1cc49a0fb6f0d836284d3058457e33}{\#define {\bfseries X\+\_\+\+F\+E\+N\+E\+T\+R\+E}~1054}\label{_graph_8h_afc1cc49a0fb6f0d836284d3058457e33}
+
+\item 
+\hypertarget{_graph_8h_aa20ffb1a563b856e27341bf2487b0f99}{\#define {\bfseries Y\+\_\+\+F\+E\+N\+E\+T\+R\+E}~600}\label{_graph_8h_aa20ffb1a563b856e27341bf2487b0f99}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_graph_8h_a85d76802aa17a0b8958ae95097182dfe}{init\+\_\+images} (char $\ast$nom\+\_\+image1, char $\ast$nom\+\_\+image2, M\+L\+V\+\_\+\+Image $\ast$$\ast$image1, M\+L\+V\+\_\+\+Image $\ast$$\ast$image2)
+\begin{DoxyCompactList}\small\item\em Initialise les images en les plaçant dans des images M\+L\+V. \end{DoxyCompactList}\item 
+\hyperlink{struct_bouton}{Bouton} $\ast$ \hyperlink{_graph_8h_ac544c150130245001c2c4739fa558fc3}{bouton} (char $\ast$texte, int x, int y, int larg, int haut)
+\begin{DoxyCompactList}\small\item\em Alloue un nouveau bouton et initialise ses champs. \end{DoxyCompactList}\item 
+void \hyperlink{_graph_8h_acdf347e97af6735991e3b6d8f7c388d6}{init\+\_\+interface} (\hyperlink{struct_interface}{Interface} $\ast$itf, char $\ast$img1, char $\ast$img\+\_\+2)
+\begin{DoxyCompactList}\small\item\em Initialise l'interface en chargeant les boutons et les images. \end{DoxyCompactList}\item 
+void \hyperlink{_graph_8h_a9c22799bea53521bc8a9752a54da7077}{affiche\+\_\+interface} (\hyperlink{struct_interface}{Interface} $\ast$itf)
+\begin{DoxyCompactList}\small\item\em Affiche l'interface. \end{DoxyCompactList}\item 
+void \hyperlink{_graph_8h_a18a93418d5ebdf6b3192e6954feb4721}{affiche\+\_\+triangle} (\hyperlink{struct_triangle}{Triangle} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Affiche un triangle sur l'interface graphique. \end{DoxyCompactList}\item 
+void \hyperlink{_graph_8h_a9a80760bc97e557164ce7864477f42dd}{affiche\+\_\+liste\+\_\+triangle} (\hyperlink{structltriangle}{Liste\+Triangle} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Affiche les triangle de la liste sur l'interface graphique. \end{DoxyCompactList}\item 
+int \hyperlink{_graph_8h_a8e4fded40b7d67779b4c646c78a5e28c}{selectionne} (\hyperlink{struct_interface}{Interface} $\ast$itf)
+\begin{DoxyCompactList}\small\item\em Récupère un clic sur la fenetre, et verifie qu'il est bien positionné sur l'un des boutons de l'interface. \end{DoxyCompactList}\item 
+int \hyperlink{_graph_8h_a69daccb49b8da5bd3889561e9ab205d4}{clic} (\hyperlink{struct_interface}{Interface} $\ast$itf, int $\ast$x1, int $\ast$x2, int $\ast$y1, int $\ast$y2)
+\begin{DoxyCompactList}\small\item\em Récupère un clic sur la première image, puis sur la deuxième. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère l'affichage du projet. 
+
+
+\begin{DoxyEnumerate}
+\item Structure \hyperlink{struct_bouton}{Bouton} \+: permet de représenter un bouton. ~\newline
+ Contient son texte et ses coordonées.
+\item Structure \hyperlink{struct_interface}{Interface} \+: permet de gerer l'interface. ~\newline
+ Contient les 2 images, leurs coordonées et les boutons. 
+\end{DoxyEnumerate}
+
+\subsection{Function Documentation}
+\hypertarget{_graph_8h_a9c22799bea53521bc8a9752a54da7077}{\index{Graph.\+h@{Graph.\+h}!affiche\+\_\+interface@{affiche\+\_\+interface}}
+\index{affiche\+\_\+interface@{affiche\+\_\+interface}!Graph.\+h@{Graph.\+h}}
+\subsubsection[{affiche\+\_\+interface}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Interface} $\ast$}]{itf}
+\end{DoxyParamCaption}
+)}}\label{_graph_8h_a9c22799bea53521bc8a9752a54da7077}
+
+
+Affiche l'interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em itf} & \+: l'interface à afficher.\\
+\hline
+\end{DoxyParams}
+Affiche l'interface, ses boutons, ainsi que ses deux images.
+
+\begin{DoxyReturn}{Returns}
+Renvoie le bouton alloué. 
+\end{DoxyReturn}
+\hypertarget{_graph_8h_a9a80760bc97e557164ce7864477f42dd}{\index{Graph.\+h@{Graph.\+h}!affiche\+\_\+liste\+\_\+triangle@{affiche\+\_\+liste\+\_\+triangle}}
+\index{affiche\+\_\+liste\+\_\+triangle@{affiche\+\_\+liste\+\_\+triangle}!Graph.\+h@{Graph.\+h}}
+\subsubsection[{affiche\+\_\+liste\+\_\+triangle}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\+\_\+liste\+\_\+triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Liste\+Triangle} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{_graph_8h_a9a80760bc97e557164ce7864477f42dd}
+
+
+Affiche les triangle de la liste sur l'interface graphique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \+: la liste de triangles à afficher.\\
+\hline
+\end{DoxyParams}
+Affiche les triangles de la liste avec des arretes et cotés rouges. \hypertarget{_graph_8h_a18a93418d5ebdf6b3192e6954feb4721}{\index{Graph.\+h@{Graph.\+h}!affiche\+\_\+triangle@{affiche\+\_\+triangle}}
+\index{affiche\+\_\+triangle@{affiche\+\_\+triangle}!Graph.\+h@{Graph.\+h}}
+\subsubsection[{affiche\+\_\+triangle}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\+\_\+triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Triangle} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{_graph_8h_a18a93418d5ebdf6b3192e6954feb4721}
+
+
+Affiche un triangle sur l'interface graphique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em itf} & \+: le triangle à afficher.\\
+\hline
+\end{DoxyParams}
+Affiche le triangle avec des arretes et cotés rouges. \hypertarget{_graph_8h_ac544c150130245001c2c4739fa558fc3}{\index{Graph.\+h@{Graph.\+h}!bouton@{bouton}}
+\index{bouton@{bouton}!Graph.\+h@{Graph.\+h}}
+\subsubsection[{bouton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bouton}$\ast$ bouton (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{texte, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{larg, }
+\item[{int}]{haut}
+\end{DoxyParamCaption}
+)}}\label{_graph_8h_ac544c150130245001c2c4739fa558fc3}
+
+
+Alloue un nouveau bouton et initialise ses champs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texte} & \+: le texte du bouton. \\
+\hline
+{\em x} & \+: l'abscisse du coin en haut à gauche du bouton. \\
+\hline
+{\em y} & \+: l'ordonnée du coin en haut à gauche du bouton. \\
+\hline
+{\em larg} & \+: la largeur du bouton. \\
+\hline
+{\em haut} & \+: la hauteur du bouton.\\
+\hline
+\end{DoxyParams}
+Alloue un nouveau bouton et initialise ses champs à l'aide des parametres. Si l'llocation echoue, le programme est quitté.
+
+\begin{DoxyReturn}{Returns}
+Renvoie le bouton alloué. 
+\end{DoxyReturn}
+\hypertarget{_graph_8h_a69daccb49b8da5bd3889561e9ab205d4}{\index{Graph.\+h@{Graph.\+h}!clic@{clic}}
+\index{clic@{clic}!Graph.\+h@{Graph.\+h}}
+\subsubsection[{clic}]{\setlength{\rightskip}{0pt plus 5cm}int clic (
+\begin{DoxyParamCaption}
+\item[{{\bf Interface} $\ast$}]{itf, }
+\item[{int $\ast$}]{x1, }
+\item[{int $\ast$}]{x2, }
+\item[{int $\ast$}]{y1, }
+\item[{int $\ast$}]{y2}
+\end{DoxyParamCaption}
+)}}\label{_graph_8h_a69daccb49b8da5bd3889561e9ab205d4}
+
+
+Récupère un clic sur la première image, puis sur la deuxième. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em itf} & \+: l'interface qui contient les images sur lesquels l'utilisateur est censé cliquer. \\
+\hline
+{\em x1} & \+: l'adresse à laquelle stocker l'abscisse du premier clic. \\
+\hline
+{\em x2} & \+: l'adresse à laquelle stocker l'abscisse du deuxième clic. \\
+\hline
+{\em y1} & \+: l'adresse à laquelle stocker l'ordonnée du premier clic. \\
+\hline
+{\em y2} & \+: l'adresse à laquelle stocker l'ordonnée du deuxième clic.\\
+\hline
+\end{DoxyParams}
+Recupère un clic, et cherche dans quel bouton il se trouve. Renvoie une valeur spécifique en fonction du bouton.
+
+\begin{DoxyReturn}{Returns}
+Renvoie une valeur en fonction de la position du clic \+: 0 \+: clic en dehors des images. 1 \+: clic dans des images. 
+\end{DoxyReturn}
+\hypertarget{_graph_8h_a85d76802aa17a0b8958ae95097182dfe}{\index{Graph.\+h@{Graph.\+h}!init\+\_\+images@{init\+\_\+images}}
+\index{init\+\_\+images@{init\+\_\+images}!Graph.\+h@{Graph.\+h}}
+\subsubsection[{init\+\_\+images}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+images (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nom\+\_\+image1, }
+\item[{char $\ast$}]{nom\+\_\+image2, }
+\item[{M\+L\+V\+\_\+\+Image $\ast$$\ast$}]{image1, }
+\item[{M\+L\+V\+\_\+\+Image $\ast$$\ast$}]{image2}
+\end{DoxyParamCaption}
+)}}\label{_graph_8h_a85d76802aa17a0b8958ae95097182dfe}
+
+
+Initialise les images en les plaçant dans des images M\+L\+V. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+\_\+image1} & \+: le nom de la première image \\
+\hline
+{\em nom\+\_\+image2} & \+: le nom de la deuxième image \\
+\hline
+{\em image1} & \+: un pointeur vers une image M\+L\+V, permet le passage par adresse de la première image \\
+\hline
+{\em image2} & \+: un pointeur vers une image M\+L\+V, permet le passage par adresse de la deuxième image\\
+\hline
+\end{DoxyParams}
+Charge les images et les place dans les pointeurs d'images M\+L\+V. Les redimensionne egalement pour qu'elles aient une taille de 512. \hypertarget{_graph_8h_acdf347e97af6735991e3b6d8f7c388d6}{\index{Graph.\+h@{Graph.\+h}!init\+\_\+interface@{init\+\_\+interface}}
+\index{init\+\_\+interface@{init\+\_\+interface}!Graph.\+h@{Graph.\+h}}
+\subsubsection[{init\+\_\+interface}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Interface} $\ast$}]{itf, }
+\item[{char $\ast$}]{img1, }
+\item[{char $\ast$}]{img\+\_\+2}
+\end{DoxyParamCaption}
+)}}\label{_graph_8h_acdf347e97af6735991e3b6d8f7c388d6}
+
+
+Initialise l'interface en chargeant les boutons et les images. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em itf} & \+: l'interface à initialiser. \\
+\hline
+{\em img1} & \+: le nom de la première image \\
+\hline
+{\em img2} & \+: le nom de la deuxième image\\
+\hline
+\end{DoxyParams}
+Charge les images dans l'interface (déjà allouée) et alloue les boutons. \hypertarget{_graph_8h_a8e4fded40b7d67779b4c646c78a5e28c}{\index{Graph.\+h@{Graph.\+h}!selectionne@{selectionne}}
+\index{selectionne@{selectionne}!Graph.\+h@{Graph.\+h}}
+\subsubsection[{selectionne}]{\setlength{\rightskip}{0pt plus 5cm}int selectionne (
+\begin{DoxyParamCaption}
+\item[{{\bf Interface} $\ast$}]{itf}
+\end{DoxyParamCaption}
+)}}\label{_graph_8h_a8e4fded40b7d67779b4c646c78a5e28c}
+
+
+Récupère un clic sur la fenetre, et verifie qu'il est bien positionné sur l'un des boutons de l'interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em itf} & \+: l'interface qui contient les boutons sur lesquels l'utilisateur est censé cliquer.\\
+\hline
+\end{DoxyParams}
+Recupère un clic, et cherche dans quel bouton il se trouve. Renvoie une valeur spécifique en fonction du bouton.
+
+\begin{DoxyReturn}{Returns}
+Renvoie une valeur en fonction de la position du clic \+: 0 \+: clic en dehors des boutons 1 \+: ajout 2 \+: cacher les points de contrainte 3 \+: rendu 4 \+: reduire les frames 5 \+: augmenter les frames 6 \+: quitter 
+\end{DoxyReturn}

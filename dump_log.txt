@@ -1,0 +1,156 @@
+commit e92addbe2e9bf6e439b58d55b9d91f96bfc99d8a
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Sat Jan 13 16:49:40 2018 +0100
+
+    Modification du Rapport, et ajout d'un format .pdf
+
+commit c8115e0a26cb6535caf28c61ec2b1344c6f1be24
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Sat Jan 13 16:29:51 2018 +0100
+
+    Retrait de l'option -v (Video).
+
+commit bc68427bc5406d5b9f36c59df931cb67786427c0
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Wed Jan 10 17:47:27 2018 +0100
+
+    Retrait de l'option -v dans getopt
+
+commit c84e54ce57bf7c0e30fa2ede61db50f6d0aa1d46
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Tue Jan 9 14:18:55 2018 +0100
+
+    Documentation terminée, suppression de fichiers inutiles.
+
+commit 5d2ace436b203807c512b11fbaf0203053cc441a
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Tue Jan 2 17:11:19 2018 +0100
+
+    Rapport fini (à vérifier), ajout des fonctions de libération de mémoire.
+
+commit 96394c7a80d69b073eeb96c2114ee8f04fd99e8a
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Thu Dec 28 20:18:15 2017 +0100
+
+    Module Triangulation créé, rapport continué.
+
+commit 2cc228e5fce6214f17f55d0e5fa84d57fa72c34a
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Thu Dec 28 17:17:45 2017 +0100
+
+    Module Triangulation créé, rapport continué.
+
+commit 4f39bc9c4332772911b83ac977b8eb88f6b81ad1
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Thu Dec 28 16:08:30 2017 +0100
+
+    Rendu fonctionnel
+
+commit aa33f25ebb9b5f5f2df75f47e259c4ddcffcbbe7
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Sun Dec 24 01:28:30 2017 +0100
+
+    Ajout des gestions d'options h (aide) et v (video, non impementé).
+
+commit 75db5e5ee7d2fbc584c63dccfb5d8b623bbdc69d
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Tue Dec 19 17:28:35 2017 +0100
+
+    Rendu fonctionnel
+
+commit a0604f0c06ebb1d49cc7bf3b37a33ee64a7245e4
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Sat Dec 16 16:38:44 2017 +0100
+
+    Ajout de la doc de Graph.h. Corrections mineures.
+
+commit 08fd577ba1ec01f0cb4a766c3782614c8be459aa
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Sat Dec 16 14:15:05 2017 +0100
+
+    Ajout de doc Doxygen (pas fini)
+
+commit 31b7de9215b492a4094942f459d7c926431f8cdd
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Fri Dec 8 23:17:08 2017 +0100
+
+    Modification des structures graphiques; interface completement fonctionnelle;
+
+commit 1347cef4a7156b3d153afd0f0cc5ae7b4b148778
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Wed Dec 6 10:43:18 2017 +0100
+
+    Suppression des fichiers objets du depot.
+
+commit 0f63f2d45a34f95feaf936d36a23f756d2c18675
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Tue Dec 5 15:25:41 2017 +0100
+
+    Ajouts mineurs, à corriger : problème très rare dans le flip à droite
+
+commit 079eb322daa3867f8b1066bac9a9debba022658a
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Tue Dec 5 12:59:04 2017 +0100
+
+    Flip dans la fenêtre de droite, correction de la liste de point
+
+commit 49d0115771d79a278284d87ed1745b7a0b3d8384
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Mon Dec 4 14:11:25 2017 +0100
+
+    Correction d'un probleme avec le flip
+
+commit 49603256f0aeb0a3d5c0011097312544828f87f2
+Merge: 9e0d0a4 933b0d5
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Mon Dec 4 14:09:19 2017 +0100
+
+    Merge branch 'flip' of https://git-etud.u-pem.fr/morphing_sgosset_dbiguenet into flip
+
+commit 9e0d0a4736d4af8c86af2d0875564431c39aebd6
+Author: Severin Gosset <sgosset@etud.u-pem.fr>
+Date:   Mon Dec 4 12:03:41 2017 +0100
+
+    correction d'un probleme avec les flips
+
+commit 933b0d59c1a5a27dc4a1118a879ed7a5e1483ce1
+Author: BIGUENET DENIS <dbiguene@localhost.localdomain>
+Date:   Wed Nov 29 13:20:36 2017 +0100
+
+    Ajout de commentaire
+
+commit ba6ccfb8dbc85e1db96f948f3c28e106b8a6a1db
+Author: BIGUENET DENIS <dbiguene@localhost.localdomain>
+Date:   Wed Nov 29 12:27:45 2017 +0100
+
+    Ajout de commentaires
+
+commit 10ec5640e12d0ab6c967fa3799f1d7fe20465597
+Author: Biguenet Denis <padawan@debianUPEM-2016>
+Date:   Tue Nov 28 18:45:56 2017 +0100
+
+    flip focntionnel (à 100?), code à remanier
+
+commit 12ea09d5efae3abdfb05060c0322f759c4b5cb19
+Author: Severin Gosset <odomar@debianSeverin.home>
+Date:   Mon Nov 27 14:58:12 2017 +0100
+
+    Flip parfois fonctionel.
+
+commit 3c1a9022beb0a9ed05d0b9a5b92fef7a61f9bba4
+Author: padawan <padawan@debianUPEM-2016>
+Date:   Sun Nov 26 16:21:10 2017 +0100
+
+    Correction du determinant, refonte des structures, et triangle delaunay
+
+commit 1b99244f8fbeef7f8f788ae7c641168b1a48a606
+Author: Severin Gosset <odomar@debianSeverin.home>
+Date:   Sun Nov 26 15:52:21 2017 +0100
+
+    Correction d'un probleme avec le determinant
+
+commit f41706a7efce99eeec36c93356bc8ffab7767ad3
+Author: Severin Gosset <odomar@debianSeverin.home>
+Date:   Wed Nov 22 17:54:50 2017 +0100
+
+    Initial commit. Affichage graphiqe fonctionnel. 1 seul tour de boucle est effectué. Calcul de coord. barycentrique fonctionnel. Determinant fonctionnel. Pas de Delaunay

@@ -1,0 +1,235 @@
+\hypertarget{_point_8h}{\section{include/\+Point.h File Reference}
+\label{_point_8h}\index{include/\+Point.\+h@{include/\+Point.\+h}}
+}
+
+
+Gère la construction et l'utilisation de la structure Point.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for Point.\+h\+:
+This graph shows which files directly or indirectly include this file\+:
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_vecteur}{Vecteur}
+\item 
+struct \hyperlink{structlpoint}{lpoint}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_point_8h_a129f3b9f5902523d0d0161c9f2756dd2}{\#define {\bfseries T\+\_\+\+I\+M\+A\+G\+E}~512}\label{_point_8h_a129f3b9f5902523d0d0161c9f2756dd2}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_point_8h_a8e31385101c1c08dd7cba5a83645d228}{typedef struct \hyperlink{struct_vecteur}{Vecteur} {\bfseries Point}}\label{_point_8h_a8e31385101c1c08dd7cba5a83645d228}
+
+\item 
+\hypertarget{_point_8h_a564ae89228a67a407e68e29560b7504f}{typedef struct \hyperlink{structlpoint}{lpoint} {\bfseries Cel\+Point}}\label{_point_8h_a564ae89228a67a407e68e29560b7504f}
+
+\item 
+\hypertarget{_point_8h_a16eb398e5044fa16815dd2216e1ced0f}{typedef struct \hyperlink{structlpoint}{lpoint} $\ast$ {\bfseries Liste\+Point}}\label{_point_8h_a16eb398e5044fa16815dd2216e1ced0f}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_vecteur}{Point} \hyperlink{_point_8h_a57861a5d95b9807c84f6163daaab71fd}{point} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Initialise un point à partir de l'abscisse et de l'ordonnée données en arguments. \end{DoxyCompactList}\item 
+void \hyperlink{_point_8h_a191fe461e9b99a2056bc538a01a48173}{affiche\+\_\+point\+\_\+ascii} (\hyperlink{struct_vecteur}{Point} p)
+\begin{DoxyCompactList}\small\item\em Affiche un point dans la console. \end{DoxyCompactList}\item 
+void \hyperlink{_point_8h_a71f0ca3a08cf4f9506c4f8c145780e93}{affiche\+\_\+liste\+\_\+point\+\_\+ascii} (\hyperlink{structlpoint}{Liste\+Point} l)
+\begin{DoxyCompactList}\small\item\em Affiche une liste de points dans la console. \end{DoxyCompactList}\item 
+\hyperlink{structlpoint}{Cel\+Point} $\ast$ \hyperlink{_point_8h_a4814b8faf3adf937a2e1df943c131a22}{alloue\+\_\+cel\+\_\+point} (\hyperlink{struct_vecteur}{Point} p\+\_\+gauche, \hyperlink{struct_vecteur}{Point} p\+\_\+droite)
+\begin{DoxyCompactList}\small\item\em Alloue une cellule pour une paire de points. \end{DoxyCompactList}\item 
+void \hyperlink{_point_8h_aa6899a8c26dfa18846ade2deb7bbde99}{construit\+\_\+liste\+\_\+point} (\hyperlink{structlpoint}{Liste\+Point} $\ast$l, \hyperlink{struct_vecteur}{Point} p1, \hyperlink{struct_vecteur}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Permet d'ajouter une paire de points dans la liste de points. \end{DoxyCompactList}\item 
+int \hyperlink{_point_8h_a57eb304572500da1361cd05ce505980b}{compare\+\_\+point} (\hyperlink{struct_vecteur}{Point} p1, \hyperlink{struct_vecteur}{Point} p2)
+\begin{DoxyCompactList}\small\item\em Compare deux points. \end{DoxyCompactList}\item 
+void \hyperlink{_point_8h_ad80e4285365e785a40921cea33e32fcf}{libere\+\_\+liste\+\_\+point} (\hyperlink{structlpoint}{Liste\+Point} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Libère la mémoire allouée à la liste de points. \end{DoxyCompactList}\item 
+\hyperlink{struct_vecteur}{Vecteur} \hyperlink{_point_8h_a48b61c4a1fd0e6aecc94da09a4c23061}{vecteur} (\hyperlink{struct_vecteur}{Point} a, \hyperlink{struct_vecteur}{Point} b)
+\begin{DoxyCompactList}\small\item\em Crée un vecteur à partir de deux points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Gère la construction et l'utilisation de la structure Point. 
+
+
+\begin{DoxyEnumerate}
+\item Structure Vecteur/\+Point \+: permet de représenter un point ou un vecteur. ~\newline
+ Contient une abscisse et une ordonnée.
+\item Structure Cel\+Point/\+Liste\+Point \+: permet de représenter une liste de point ou une cellule. ~\newline
+ Contient une paire une point et un pointeur vers le point suivant.
+\item T\+\_\+\+I\+M\+A\+G\+E \+: correspond à la taille de l'image (512 pixels). 
+\end{DoxyEnumerate}
+
+\subsection{Function Documentation}
+\hypertarget{_point_8h_a71f0ca3a08cf4f9506c4f8c145780e93}{\index{Point.\+h@{Point.\+h}!affiche\+\_\+liste\+\_\+point\+\_\+ascii@{affiche\+\_\+liste\+\_\+point\+\_\+ascii}}
+\index{affiche\+\_\+liste\+\_\+point\+\_\+ascii@{affiche\+\_\+liste\+\_\+point\+\_\+ascii}!Point.\+h@{Point.\+h}}
+\subsubsection[{affiche\+\_\+liste\+\_\+point\+\_\+ascii}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\+\_\+liste\+\_\+point\+\_\+ascii (
+\begin{DoxyParamCaption}
+\item[{{\bf Liste\+Point}}]{l}
+\end{DoxyParamCaption}
+)}}\label{_point_8h_a71f0ca3a08cf4f9506c4f8c145780e93}
+
+
+Affiche une liste de points dans la console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \+: liste de points à afficher. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_point_8h_a191fe461e9b99a2056bc538a01a48173}{\index{Point.\+h@{Point.\+h}!affiche\+\_\+point\+\_\+ascii@{affiche\+\_\+point\+\_\+ascii}}
+\index{affiche\+\_\+point\+\_\+ascii@{affiche\+\_\+point\+\_\+ascii}!Point.\+h@{Point.\+h}}
+\subsubsection[{affiche\+\_\+point\+\_\+ascii}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\+\_\+point\+\_\+ascii (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{p}
+\end{DoxyParamCaption}
+)}}\label{_point_8h_a191fe461e9b99a2056bc538a01a48173}
+
+
+Affiche un point dans la console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \+: point à afficher. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_point_8h_a4814b8faf3adf937a2e1df943c131a22}{\index{Point.\+h@{Point.\+h}!alloue\+\_\+cel\+\_\+point@{alloue\+\_\+cel\+\_\+point}}
+\index{alloue\+\_\+cel\+\_\+point@{alloue\+\_\+cel\+\_\+point}!Point.\+h@{Point.\+h}}
+\subsubsection[{alloue\+\_\+cel\+\_\+point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cel\+Point}$\ast$ alloue\+\_\+cel\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{p\+\_\+gauche, }
+\item[{{\bf Point}}]{p\+\_\+droite}
+\end{DoxyParamCaption}
+)}}\label{_point_8h_a4814b8faf3adf937a2e1df943c131a22}
+
+
+Alloue une cellule pour une paire de points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+gauche} & \+: point dans l'image de gauche. \\
+\hline
+{\em p\+\_\+droite} & \+: point dans l'image de droite.\\
+\hline
+\end{DoxyParams}
+Alloue la mémoire nécessaire pour une cellule de liste de points.
+
+\begin{DoxyReturn}{Returns}
+Renvoie une cellule de liste de points. 
+\end{DoxyReturn}
+\hypertarget{_point_8h_a57eb304572500da1361cd05ce505980b}{\index{Point.\+h@{Point.\+h}!compare\+\_\+point@{compare\+\_\+point}}
+\index{compare\+\_\+point@{compare\+\_\+point}!Point.\+h@{Point.\+h}}
+\subsubsection[{compare\+\_\+point}]{\setlength{\rightskip}{0pt plus 5cm}int compare\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{p1, }
+\item[{{\bf Point}}]{p2}
+\end{DoxyParamCaption}
+)}}\label{_point_8h_a57eb304572500da1361cd05ce505980b}
+
+
+Compare deux points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & \+: premier point. \\
+\hline
+{\em p2} & \+: deuxième point.\\
+\hline
+\end{DoxyParams}
+Compare les coordonnées de deux points.
+
+\begin{DoxyReturn}{Returns}
+Renvoie 1 si les deux points sont les mêmes et 0 sinon. 
+\end{DoxyReturn}
+\hypertarget{_point_8h_aa6899a8c26dfa18846ade2deb7bbde99}{\index{Point.\+h@{Point.\+h}!construit\+\_\+liste\+\_\+point@{construit\+\_\+liste\+\_\+point}}
+\index{construit\+\_\+liste\+\_\+point@{construit\+\_\+liste\+\_\+point}!Point.\+h@{Point.\+h}}
+\subsubsection[{construit\+\_\+liste\+\_\+point}]{\setlength{\rightskip}{0pt plus 5cm}void construit\+\_\+liste\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf Liste\+Point} $\ast$}]{l, }
+\item[{{\bf Point}}]{p1, }
+\item[{{\bf Point}}]{p2}
+\end{DoxyParamCaption}
+)}}\label{_point_8h_aa6899a8c26dfa18846ade2deb7bbde99}
+
+
+Permet d'ajouter une paire de points dans la liste de points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & \+: point dans l'image de gauche. \\
+\hline
+{\em p2} & \+: point dans l'image de droite.\\
+\hline
+\end{DoxyParams}
+Alloue une cellule et l'ajoute à la fin de la liste \hypertarget{_point_8h_ad80e4285365e785a40921cea33e32fcf}{\index{Point.\+h@{Point.\+h}!libere\+\_\+liste\+\_\+point@{libere\+\_\+liste\+\_\+point}}
+\index{libere\+\_\+liste\+\_\+point@{libere\+\_\+liste\+\_\+point}!Point.\+h@{Point.\+h}}
+\subsubsection[{libere\+\_\+liste\+\_\+point}]{\setlength{\rightskip}{0pt plus 5cm}void libere\+\_\+liste\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{{\bf Liste\+Point} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{_point_8h_ad80e4285365e785a40921cea33e32fcf}
+
+
+Libère la mémoire allouée à la liste de points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \+: liste de points à libérer. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_point_8h_a57861a5d95b9807c84f6163daaab71fd}{\index{Point.\+h@{Point.\+h}!point@{point}}
+\index{point@{point}!Point.\+h@{Point.\+h}}
+\subsubsection[{point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point} point (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{_point_8h_a57861a5d95b9807c84f6163daaab71fd}
+
+
+Initialise un point à partir de l'abscisse et de l'ordonnée données en arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: abscisse du point. \\
+\hline
+{\em y} & \+: ordonnée du point.\\
+\hline
+\end{DoxyParams}
+Définit un point et affecte les coordonnées dans x et y.
+
+\begin{DoxyReturn}{Returns}
+Renvoie un point initialisé. 
+\end{DoxyReturn}
+\hypertarget{_point_8h_a48b61c4a1fd0e6aecc94da09a4c23061}{\index{Point.\+h@{Point.\+h}!vecteur@{vecteur}}
+\index{vecteur@{vecteur}!Point.\+h@{Point.\+h}}
+\subsubsection[{vecteur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vecteur} vecteur (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}}]{a, }
+\item[{{\bf Point}}]{b}
+\end{DoxyParamCaption}
+)}}\label{_point_8h_a48b61c4a1fd0e6aecc94da09a4c23061}
+
+
+Crée un vecteur à partir de deux points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \+: premier point. \\
+\hline
+{\em b} & \+: deuxième point.\\
+\hline
+\end{DoxyParams}
+Initialise un vecteur à partir des coordonnées des deux points.
+
+\begin{DoxyReturn}{Returns}
+Renvoie un vecteur. 
+\end{DoxyReturn}
